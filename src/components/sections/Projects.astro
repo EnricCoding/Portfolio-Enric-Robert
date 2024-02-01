@@ -5,13 +5,12 @@ import Section from "../Section.astro"
 import { projects } from "@cv"
 import type { Highlight } from "@/cv"
 ---
-
-<Section title="">
-  <ul>
-    {projects.length >= 1 &&
-      projects.map(
-        ({ url, description, highlights, name, isActive, github }) => {
-          return (
+{projects.length >= 2 &&
+  projects.map(
+    ({ url, description, highlights, name, isActive, github }) => {
+      return (
+        <Section title="">
+          <ul>
             <li>
               <article>
                 <header>
@@ -40,12 +39,12 @@ import type { Highlight } from "@/cv"
                 </footer>
               </article>
             </li>
-          )
-        }
+          </ul>
+        </Section>
       )
     }
-  </ul>
-</Section>
+  )
+}
 
 <style>
   ul {
