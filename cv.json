@@ -214,6 +214,16 @@
       "Unicorns"
     ]
   }],
-  "references": [],
-  "projects": []
+  "references": [{
+    "name": "Jane Doe",
+    "reference": "Reference…"
+  }],
+  "projects": [{
+    "name": "",
+    "isActive": false,
+    "description": "",
+    "highlights": [],
+    "url": "",
+    "github": ""
+  }]
 }

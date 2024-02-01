@@ -3,11 +3,12 @@ import GitHub from "@/icons/GitHub.astro"
 import Section from "../Section.astro"
 
 import { projects } from "@cv"
+import type { Highlight } from "@/cv"
 ---
 
 <Section title="">
   <ul>
-    {
+    {projects.length >= 1 &&
       projects.map(
         ({ url, description, highlights, name, isActive, github }) => {
           return (
@@ -33,7 +34,7 @@ import { projects } from "@cv"
                   <p>{description}</p>
                 </header>
                 <footer>
-                  {highlights?.map((highlight) => {
+                  {highlights.map((highlight) => {
                     return <span>{highlight}</span>
                   })}
                 </footer>
